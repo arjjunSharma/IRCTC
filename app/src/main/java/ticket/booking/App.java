@@ -7,7 +7,7 @@ import ticket.booking.service.UserBookingService;
 import ticket.booking.util.UserServiceUtil;
 
 import java.io.IOException;
-//import java.sql.Time;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class App {
         try {
             userBookingService = new UserBookingService();
         } catch (IOException ex) {
-            System.out.println("There is something wrong");
+            System.out.println(ex.getMessage());
             return;
         }
         while (option != 7) {

@@ -1,7 +1,7 @@
 
 package ticket.booking.service;
 
-import com.fasterxml.jackson.core.JsonParser;
+//import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -23,7 +23,7 @@ public class UserBookingService {
 
     private User user;
 
-    private final String USER_FILE_PATH = "app/src/main/java/ticket/booking/localDb/users.json";
+    private final String USER_FILE_PATH = "/Users/anmolsharma/Desktop/IRCTC/app/src/main/java/ticket/booking/localDB/users.json";
 
     public UserBookingService(User user) throws IOException {
         this.user = user;
