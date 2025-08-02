@@ -1,11 +1,11 @@
-# 🚆 Train Ticket Booking System
+**# 🚆 Train Ticket Booking System**          
 
 A console-based Train Ticket Booking System written in **Java**, using **Gradle** for build automation and **Jackson** for JSON processing.
 It supports user registration, login, booking tickets, and searching for trains.
 
 ---
 
-## 🧠 Features
+** 🧠 Features**
 
 - User Sign-up/Login
 - Search Trains
@@ -16,7 +16,7 @@ It supports user registration, login, booking tickets, and searching for trains.
 
 ---
 
-## 📁 Project Structure
+**📁 Project Structure**
 
 IRCTC/
 ├── app/
@@ -31,7 +31,7 @@ IRCTC/
 
 ---
 
-## 🛠️ Technologies Used
+** 🛠️ Technologies Used**
 
 - Java 8+
 - Gradle
@@ -40,60 +40,54 @@ IRCTC/
 
 ---
 
-## 🚀 How to Run
+** 🚀 How to Run**
 
 ### ▶️ 1. Run using Gradle (Recommended)
-```bash 
-./gradlew run
+
+  ./gradlew run
 **⚠️ Note: Make sure your terminal supports input via Scanner. Some IDEs or background terminals may cause NoSuchElementException.**
 
 
-🏗️ 2. Create and Run Fat JAR (All-in-one)
-bash
-Copy
-Edit
+**🏗️ 2. Create and Run Fat JAR (All-in-one)**
+
 ./gradlew shadowJar
 java -jar app/build/libs/app-all.jar
-This bundles all dependencies (Jackson, BCrypt, etc.) into one JAR.
+```This bundles all dependencies (Jackson, BCrypt, etc.) into one JAR.```
 
-🔧 3. Run Without Fat JAR (Manual classpath method)
-Step 1: Copy dependencies to /libs
+**🔧 3. Run Without Fat JAR (Manual classpath method)**
+```Step 1: Copy dependencies to /libs```
 Add this to app/build.gradle:
 
-groovy
-Copy
-Edit
 task copyRuntimeLibs(type: Copy) {
     from configurations.runtimeClasspath
     into "$buildDir/libs"
 }
-```
-Then run:(in bash shell)
 
 ./gradlew copyRuntimeLibs
-Step 2: Run app with dependencies
+
+**Step 2: Run app with dependencies**
 
    cd app/build/classes/java/main
    java -cp ".:../../../libs/*" ticket.booking.App
 (Optional)
-📝 Custom Script
-You can use a run.sh to make execution easier:
+**📝 Custom Script**
+``You can use a run.sh to make execution easier:``
 
 #!/bin/bash
 echo "Launching Train Booking System..."
 java -jar app/build/libs/app-all.jar
-Make it executable:
-
+```Make it executable:```
 chmod +x run.sh
 ./run.sh
-✅ To Do
+
+**✅ To Do**
  Add train data persistence (JSON/DB)
 
  Add GUI (JavaFX or web frontend)
 
  Add admin panel for train updates
 
-🧑‍💻 Author
+**🧑‍💻 Author**
 Arjun Sharma
 passionate backend learner from 🇮🇳
 Built with ❤️ and lots of curiosity.
